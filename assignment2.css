@@ -1,0 +1,46 @@
+.main{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 60px;
+
+}
+.square{
+    height: 330px;
+    width: 200px;
+    border-radius: 12px;
+}
+.square img{
+    height: 150px;
+    width: 200px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+.box1{
+    background-color:whitesmoke
+}
+.box2{
+    background-color:whitesmoke
+}
+.box3{
+    background-color:whitesmoke
+}
+.para1{
+    text-align:center;
+    color:rgb(91, 9, 91);
+    font-weight:bold;
+}
+.para2{
+    text-align: center;
+}
+.images{
+    display: flex;
+    background-color: rgb(91, 9, 91);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    height: 75px;
+    width: 200px;
+}
+.images img{
+    height: 75px;
+    width:33%;    
+}
