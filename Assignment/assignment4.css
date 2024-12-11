@@ -1,0 +1,48 @@
+body{
+    background-image: url(https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png);
+}
+.main{
+    display: flex;
+    /*margin: auto;*/
+}
+.child{
+    width: 30%;
+    color:white;
+}
+.child2{
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    width: 70%;
+}
+.child2 p{
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    gap: 50px;
+    color:white;
+}
+.child3{
+    font-size:80px;
+    text-align: center;
+    color: white;
+    font-weight:900;
+}
+.child4{
+    text-align: center;
+    color:white;
+    font-size: 60px;
+
+}
+.child5{
+    text-align: center;
+    margin: auto;
+}
+.container{
+    display: flex;
+}
+.box{
+    height:100px;
+    width:200px;
+    background-color: darkcyan;
+}
