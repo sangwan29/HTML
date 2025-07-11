@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/8e060a00c1.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav class="h-20 bg-white flex justify-between">
+        <div class=" text-center w-[30%] ml-[45%] text-2xl text-amber-600 flex mt-4 sm:w-[20%] sm:ml-8 lg:w-[10%]">
+            <i class="fa-solid fa-b"></i>
+            <i class="fa-solid fa-l"></i>
+            <i class="fa-solid fa-i"></i>
+            <i class="fa-solid fa-n"></i>
+            <i class="fa-solid fa-k"></i>
+            <i class="fa-solid fa-i text-lime-700"></i>
+            <i class="fa-solid fa-t text-lime-700"></i>
+        </div>
+        <div class="hidden sm:inline sm:w-[60%] flex justify-between lg:w-[50%]">
+            <input type="text" id="location" name="location" placeholder="Enter your location" class="w-[35%] px-2 h-10 mt-4 border rounded-md">
+            <input type="text" id="name" name="name" placeholder="Search for products, brands, or categories..." required class="mt-4 ml-2 px-2 h-10 border border-gray-300 rounded-md lg:w-[60%]">
+        </div>
+        <div class="hidden lg:inline lg:h-20 lg:text-base lg:mr-4 lg:text-center lg:w-[20%] ">
+            <button class=" text-xl"><a href="/blinkit_project/login.html">Login</a></button>
+            <button class="bg-lime-600 mt-4 mx-4 rounded-md w-28 ml-2 h-12 text-white"><i class="fa-solid fa-cart-shopping"></i>My Cart</button>
+        </div>
+    </nav>
+    <hr>
+    <div class="mx-4 mt-2 ">
+        <button>
+        <img class="w-[100%]" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=2160/layout-engine/2022-05/Group-33704.jpg" alt="">
+        </button>
+    </div>
+    <div class="sm:flex justify-between mt-2">
+        <div class="mx-4 mt-4 px-12 sm:px-0 sm:ml-2">
+            <button>
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-07/pharmacy-WEB.jpg" alt="">
+            </button>
+        </div>
+        <div class="mx-4 mt-4 px-12 sm:px-0">
+            <button>
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-07/Pet-Care_WEB.jpg" alt="">
+            </button>
+        </div>
+        <div class="mx-4 mt-4 px-12 sm:px-0">
+            <button>
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-03/babycare-WEB.jpg" alt="">
+            </button>
+        </div>
+    </div>
+
+    <!--20 div created-->
+    <div class="lg:flex mt-4 ml-8">
+        <div class="ml-4 ">
+            <img class="h-[100px] w-[100px] rounded-lg" src="https://tse3.mm.bing.net/th?id=OIP.WqcE_EIw-UuwaB0vPE6BXwHaGU&pid=Api&P=0&h=180" alt="">
+            <p class="text-center mt-2 w-[100px]">Paan Corner</p>
+        </div>
+        <div class="ml-4">
+            <img class="h-[100px] w-[100px] rounded-lg" src="https://watermark.lovepik.com/photo/20211123/large/lovepik-breakfast-egg-milk-and-bread-picture_500852106.jpg" alt="">
+            <p class="text-center mt-2 w-[100px]">Dairy, Breads & Eggs</p>
+        </div>
+        <div class="ml-4">
+            <img class="h-[100px] w-[100px] rounded-lg" src="https://getwallpapers.com/wallpaper/full/2/8/9/1443674-cool-wallpaper-fruits-and-vegetables-1920x1080-download-free.jpg" alt="">
+            <p class="text-center mt-2 w-[100px]">Fruits & Vegetables</p>
+        </div>
+        <div class="ml-4">
+            <img class="h-[100px] w-[100px] rounded-lg" src="https://topnaturalremedies.net/wp-content/uploads/2014/09/Fresh-juiceHealthy-drink.jpg" alt="">
+            <p class="text-center mt-2 w-[100px]">Cold drinks & Juices</p>
+        </div>
+        <div class="ml-4">
+            <img class="h-[100px] w-[100px] rounded-lg" src="https://5.imimg.com/data5/SELLER/Default/2022/7/MT/CN/UO/122190343/lays-blue-20-10pc--1000x1000.jpg" alt="">
+            <p class="text-center mt-2 w-[100px]">Snacks & Munchies</p>
+        </div>
+        <div class="ml-4">
+            <img class="h-[100px] w-[100px] rounded-lg" src="https://i.pinimg.com/originals/cf/bb/02/cfbb020282036593300c746f89fded68.jpg" alt="">
+            <p class="text-center mt-2 w-[100px]">Breakfast & Instant food</p>
+        </div>
+        <div class="ml-4">
+            <img class="h-[100px] w-[100px] rounded-lg" src="https://e1.pxfuel.com/desktop-wallpaper/880/160/desktop-wallpaper-q-cover-cadbury-dairy-milk-cadbury-dairy-milk-chocolate.jpg" alt="">
+            <p class="text-center mt-2 w-[100px]">Sweet Tooth</p>
+        </div>
+        <div class="ml-4">
+            <img class="h-[100px] w-[100px] rounded-lg" src="https://img.freepik.com/premium-vector/sandwich-cookies-or-cracker-package-design-easy-used-template-isolated-on-blue-background-food-and-sweets-baking-and-cooking-theme-realistic-3d-illustration_316839-98.jpg" alt="">
+            <p class="text-center mt-2 w-[100px]">Bakery & Biscuits</p>
+        </div>
+        <div class="ml-4">
+            <img class="h-[100px] w-[100px] rounded-lg" src="https://i.pinimg.com/736x/82/de/50/82de5062b4a42b25705411578cc3453d.jpg" alt="">
+            <p class="text-center mt-2 w-[100px]">Tea, Coffee & Health drink</p>
+        </div>
+    </div> 
+    <div class="flex mt-4 ml-8">
+        <div class="ml-4 ">
+            <img class="h-[100px] w-[100px] rounded-lg" src="https://www.foodandwine.com/thmb/ht71Tf-lEL-Y3wQSrguLXgeIRSQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Garam-Masala-FT-BLOG0223-58b3a5b9dd27422780737f08d22a558b.jpg" alt="">
+            <p class="text-center mt-2 w-[100px]">Masala, Oil & more</p>
+        </div>
+        <div class="ml-4">
+            <img class="h-[100px] w-[100px] rounded-lg" src="https://cdn.dribbble.com/users/2302147/screenshots/5207097/media/60fb730b457055c19bf01906ef5df5f7.jpg?compress=1&resize=400x300" alt="">
+            <p class="text-center mt-2 w-[100px]">Sauces & spreads</p>
+        </div>
+        <div class="ml-4">
+            <img class="h-[100px] w-[100px] rounded-lg" src="https://gfs.com/wp-content/uploads/2022/08/MeatPoultryFish_ICHeader.jpg" alt="">
+            <p class="text-center mt-2 w-[100px]">Chicken,meat & fish</p>
+        </div>
+        <div class="ml-4">
+            <img class="h-[100px] w-[100px] rounded-lg" src="https://best-remedies.com/assets/uploads/article/294ba-pic4.jpg" alt="">
+            <p class="text-center mt-2 w-[100px]">Organic & healthy living</p>
+        </div>
+        <div class="ml-4">
+            <img class="h-[100px] w-[100px] rounded-lg" src="https://i.pinimg.com/736x/67/05/0e/67050e69c04f7957781e03a4b6e6eb31.jpg" alt="">
+            <p class="text-center mt-2 w-[100px]">Baby Care</p>
+        </div>
+        <div class="ml-4">
+            <img class="h-[100px] w-[100px] rounded-lg" src="https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/15dd00111997723.600c45b314865.jpg" alt="">
+            <p class="text-center mt-2 w-[100px]">Atta, Rice & Dal</p>
+        </div>
+        <div class="ml-4">
+            <img class="h-[100px] w-[100px] rounded-lg" src="https://pics.craiyon.com/2023-10-04/43f415448a43461d96d6150455a75760.webp" alt="">
+            <p class="text-center mt-2 w-[100px]">Cleaning essentials</p>
+        </div>
+        <div class="ml-4">
+            <img class="h-[100px] w-[100px] rounded-lg" src="https://i.shelterness.com/2020/07/a-beautiful-blue-and-white-home-office-with-a-long-shared-desk-that-goes-along-all-the-walls-and-stylish-storage-units-by-the-window.jpg" alt="">
+            <p class="text-center mt-2 w-[100px]">Home & Office</p>
+        </div>
+        <div class="ml-4">
+            <img class="h-[100px] w-[100px] rounded-lg" src="https://cdn.glamcheck.com/health/files/2012/07/List-personal-hygiene-products.jpg" alt="">
+            <p class="text-center mt-2 w-[100px]">Personal care</p>
+        </div>
+        
+    </div>    
+    <p class="text-2xl font-semibold mt-4 ml-8">Dairy, Bread And Eggs</p>
+    <div class="flex">
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-8" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=85,metadata=none,w=120,h=120/app/images/products/full_screen/pro_46258.jpg?ts=1685979258https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/746586b3-e9bf-4ebf-a2ea-9af8471fecce.jpg?ts=1712325569" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Saras Toned Fresh Milk</p>
+                <p class="ml-2 mt-2">500ml</p>
+                <div class="mt-2">
+                    <button class="ml-2 font-semibold">Rs.26</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-4 w-40 h-32" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/0e8047b0-4ad0-4f89-a8f4-80d8b5988103.jpg?ts=1712325568" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Saras Gold Full Cream Fresh Milk</p>
+                <p class="ml-2">500ml</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.33</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-4 w-40 h-32 " src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/5ee4441d-9109-48fa-9343-f5ce82b905a6.jpg?ts=1706182143" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Amul Taaza Toned Fresh Milk</p>
+                <p class="ml-2">500ml</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.26</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-4 w-40 h-32" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/366421a.jpg?ts=1690814947" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Saras Curd</p>
+                <p class="ml-2 mt-2">200g</p>
+                <div class="mt-2">
+                    <button class="ml-2 font-semibold">Rs.16</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-8 w-40 h-32" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/1c0db977-31ab-4d8e-abf3-d42e4a4b4632.jpg?ts=1706182142" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Amul Gold Full Cream Fresh Milk</p>
+                <p class="ml-2">200g</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.33</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="text-2xl font-semibold mt-4 ml-8">Rolling paper & tobacco</p>
+    <div class="flex">
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-4 h-32 w-40" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/506375a.jpg?ts=1698309252" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Brown Ripper Rolling Paper 32 Leaves</p>
+                <p class="ml-2 mt-2">1 pack(64 pieces)</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.120</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-4 w-40 h-32" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/506711a.jpg?ts=1686566489" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Perfect Rolling Paper(Pink)</p>
+                <p class="ml-2">3 pack</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.45</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-4 w-40 h-32 " src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/2607a98a-0b2d-43dc-b5a5-2322540fa309.jpg?ts=1708597803" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Brown Rolling Paper(King Size)</p>
+                <p class="ml-2">1 unit(32 pieces)</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.50</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-4 w-40 h-32" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/506710a.jpg?ts=1685952438" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Perfect Rolled Cones-Bongchie</p>
+                <p class="ml-2">3 pack</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.45</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-8 w-40 h-32" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/512860a.jpg?ts=1690832312" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Ultimate Rolling Paper With Filter Tips</p>
+                <p class="ml-2">1 Pack(32 Leaves)</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.80</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="text-2xl font-semibold mt-4 ml-8">Snacks & Munchies</p>
+    <div class="flex">
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-4 h-32 w-40" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/e38b7384-7a24-4e08-b313-c637c517f3f9.jpg?ts=1723100976" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Cheetos Flamin Hot Popcorn</p>
+                <p class="ml-2">17.7g</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.170</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-4 w-40 h-32" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/6807f54d-f711-49ca-9635-514ac9b72d7f.jpg?ts=1724850859" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Kettle Studio Potato Chips</p>
+                <p class="ml-2">56g</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.47</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-4 w-40 h-32 " src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/c4486d68-0ed2-43f0-9214-851063495eb5.jpg?ts=1723098569" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Kettle Studio Potato-Sweet Chilli Chips</p>
+                <p class="ml-2">113g</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.99</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-4 w-40 h-32" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/c7221d26-16ce-4b85-802a-b4a5aaabae13.jpg" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Orion K Snack Khimchi Onion Rings</p>
+                <p class="ml-2">70g</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.50</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-8 w-40 h-32" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/3281415d-c53c-456c-8618-649f8e931c42.jpg?ts=1723099134" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Kettle Studio Wafers-Lime & Chilli</p>
+                <p class="ml-2">150g</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.80</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="text-2xl font-semibold mt-4 ml-8">Hookah</p>
+    <div class="flex">
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-4 h-32 w-40" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/480935a.jpg?ts=1687523763" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Paan Raas Herbal Hookah Flavor..</p>
+                <p class="ml-2">50g</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.100</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-4 w-40 h-32" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/480932a.jpg?ts=1688628164" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Natural Spring Water Herbal Hookah Flavour</p>
+                <p class="ml-2">50g</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.100</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-4 w-40 h-32 " src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/540986a.jpg" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Premium Silver Hookah Foil by Rhythm Imports</p>
+                <p class="ml-2">1 pack(30 pieces)</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.100</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-4 w-40 h-32" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/480929a.jpg?ts=1687951095" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Watermelon Herbal Hookah Flavor...</p>
+                <p class="ml-2">50g</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.100</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-8 w-40 h-32" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/480930a.jpg?ts=1687333267" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Bombay Paan Masala Herbal Hookah Flavor..</p>
+                <p class="ml-2">50g</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.100</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="text-2xl font-semibold mt-4 ml-8">Mouth fresheners</p>
+    <div class="flex">
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-4 h-32 w-40" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/480930a.jpg?ts=1687333267" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Chandan Special Masala Mouth Freshener</p>
+                <p class="ml-2">100ml</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.60</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-4 w-40 h-32" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/363212a.jpg?ts=1690814160" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Impact Sugar Free Mint Candy</p>
+                <p class="ml-2">14g</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.150</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-4 w-40 h-32 " src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/122335a.jpg?ts=1686225264" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Chandan Star 5 in 1 Mouth Freshener</p>
+                <p class="ml-2">200g</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.200</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-4 w-40 h-32" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/9dfff4f5-de84-4a3c-9cef-6d8e504cbf89.jpg?ts=1723143406" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Rajnigandha Silver Pearls- Silver Coated</p>
+                <p class="ml-2">6g</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.60</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-8 w-40 h-32" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/395091a.jpg?ts=1686558551" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Paper boat Aam Papad Fruit Bar</p>
+                <p class="ml-2">90g</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.71</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="text-2xl font-semibold mt-4 ml-8">Cold Drinks & Juices</p>
+    <div class="flex">
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-4 h-32 w-40" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/230659a.jpg?ts=1687324818" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Saras Unsalted Buttermilk</p>
+                <p class="ml-2 ">500ml</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.16</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-4 w-40 h-32" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/cfeaa68b-2ce1-4c1e-95c5-450bbb9bb281.jpg?ts=1708591243" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Bisleri Packaged Water</p>
+                <p class="ml-2 mt-2">5 l</p>
+                <div class="mt-2">
+                    <button class="ml-2 font-semibold">Rs.70</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-4 w-40 h-32 " src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/fec89b7b-8a13-477e-b750-7a52e82828a0.jpg?ts=1717747523" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Coca-Cola Soft Drink(750ml)-Pack of 2</p>
+                <p class="ml-2">2 * 750ml</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.79</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-4 w-40 h-32" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/e69c587d-802a-40eb-a40b-a6bc9623526d.jpg?ts=1707312325" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Thums Up Soft Drink(750ml)</p>
+                <p class="ml-2 mt-2">750ml</p>
+                <div class="mt-2">
+                    <button class="ml-2 font-semibold">Rs.40</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-8 w-40 h-32" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/482620a.jpg?ts=1690813234" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Ice Cubes by Dras Ice</p>
+                <p class="ml-2">1 kg</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.70</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="text-2xl font-semibold mt-4 ml-8">Candies & Gums</p>
+    <div class="flex">
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-4 h-32 w-40" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/b35d3e0c-957e-4575-a85f-203591f91fe5.jpg?ts=1729074799" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Chupa Chups Sour Bites Mixed Fruit Candy</p>
+                <p class="ml-2 mt-2">61.6g</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.35</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-4 w-40 h-32" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/0cdb751e-a797-4f76-ba3d-00a4c6130c19.jpg?ts=1710154019" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Happydent Wave Sugarfree Chewingum</p>
+                <p class="ml-2">28.9g</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.50</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-4 w-40 h-32 " src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/6aa6df45-3617-42dd-a025-b27126beb727.jpg?ts=1729074805" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Chupa Chups Sour Belt Mixed Fruit Candy</p>
+                <p class="ml-2">57.6g</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.30</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-4 w-40 h-32" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/409780a.jpg?ts=1688471121" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">Parle Poppins Candy</p>
+                <p class="ml-2 mt-2">100g</p>
+                <div class="mt-2">
+                    <button class="ml-2 font-semibold">Rs.23</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 h-64 w-48 ml-8 mt-4 rounded-lg">
+            <img class="rounded-lg ml-8 w-40 h-32" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/276011a.jpg?ts=1690813900" alt="">
+            <div>
+                <p class="ml-2 text-base text font-semibold">HartBeat Corazon Beloved Candy</p>
+                <p class="ml-2">200g</p>
+                <div class="">
+                    <button class="ml-2 font-semibold">Rs.50</button>
+                    <button class="ml-8 border-2 border-lime-600 bg-lime-100 h-10 w-16 rounded-lg">ADD</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex mt-8">
+        <div class="w-[25%] ml-4">
+        <p class="text-xl ml-4 font-semibold">Useful Links</p>
+        <div class="flex mt-4">
+            <div class="ml-4 ">
+                <a href="/blinkit_project/about.html">About</a><br>
+                <a href="">Careers</a><br>
+                <a href="">Blog</a><br>
+                <a href="">Press</a><br>
+                <a href="">Lead</a><br>
+                <a href="">Value</a>
+            </div>
+            <div class="ml-8">
+                <a href="">Privacy</a><br>
+                <a href="">Terms</a><br>
+                <a href="">FAQs</a><br>
+                <a href="">Security</a><br>
+                <a href="">Mobile</a><br>
+                <a href="">Contact</a>
+            </div>
+            <div class="ml-8">
+                <a href="">Partner</a><br>
+                <a href="">Franchise</a><br>
+                <a href="">Seller</a><br>
+                <a href="">Warehouse</a><br>
+                <a href="">Deliver</a><br>
+                <a href="">Resources</a>
+            </div>
+        </div>
+        </div>
+        <div class="ml-10">
+            <p class="ml-8 text-xl font-semibold">Categories</p>
+            <div class="flex mt-4">
+                <div class="ml-8">
+                    <a href="">Vegetables & Fruits</a><br>
+                    <a href="">Cold Drinks & Juices</a><br>
+                    <a href="">Bakery & Biscuits</a><br>
+                    <a href="">Dry Fruits, Masala & Oil</a><br>
+                    <a href="">Organic & Premium</a><br>
+                    <a href="">Pharma & Wellness</a><br>
+                    <a href="">Ice Creams & Frozen Desserts</a><br>
+                    <a href="">Beauty & Cosmetics</a><br>
+                    <a href="">Toys & Games</a>
+                </div>
+                <div class="ml-8">
+                    <a href="">Dairy & Breakfast</a><br>
+                    <a href="">Instant & Frozen Food</a><br>
+                    <a href="">Sweet Tooth</a><br>
+                    <a href="">Sauces & Spreads</a><br>
+                    <a href="">Paan Corner</a><br>
+                    <a href="">Cleaning Essentials</a><br>
+                    <a href="">Personal Care</a><br>
+                    <a href="">Electronics & Electricals</a><br>
+                    <a href="">Print Store</a>
+                </div>
+                <div class="ml-8">
+                    <a href="">Munchies</a><br>
+                    <a href="">Tea, Coffee & Health Drinks</a><br>
+                    <a href="">Atta, Rice & Dal</a><br>
+                    <a href="">Chicken, Meat & Fish</a><br>
+                    <a href="">Baby Care</a><br>
+                    <a href="">Home & Office</a><br>
+                    <a href="">Pet Care</a><br>
+                    <a href="">Books</a><br>
+                    <a href="">Navratri Specials</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
