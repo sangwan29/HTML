@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flex Layout with White Space</title>
+</head>
+<body style="margin: 0; font-family: Arial, sans-serif;">
+    <h1 style="text-align: center;">DESKTOP</h1>
+  <!-- HEADER + MENU -->
+  <div style="display: flex; width: 100%;">
+    <div style="flex: 1; background-color: #0b0c2a; color: white; text-align: center; padding: 20px; font-weight: bold;">HEADER</div>
+    <div style="flex: 1; background-color: #f4434b; color: white; text-align: center; padding: 20px; font-weight: bold;">MENU</div>
+  </div>
+
+  <!-- HERO -->
+  <div style="background-color: #4a90e2; color: white; text-align: center; padding: 80px; font-weight: bold;">
+    HERO
+  </div>
+
+  <!-- MAIN + WHITE SPACE + IMAGE + EXTRA -->
+  <div style="display: flex; width: 100%;">
+    
+    <!-- MAIN -->
+    <div style="flex: 2; background-color: #17213d; color: white; text-align: center; padding: 60px; font-weight: bold;">
+      MAIN
+    </div>
+    
+    <!-- WHITE SPACE -->
+    <div style="width: 25%; background-color: white;"></div>
+
+    <!-- IMAGE + EXTRA (vertical stack) -->
+    <div style="display: flex; flex-direction: column; width: 25%;">
+      <div style="background-color: #b3e5e5; text-align: center; padding: 40px; font-weight: bold;">IMAGE</div>
+      <div style="background-color: #3fbf87; text-align: center; padding: 40px; font-weight: bold;">EXTRA</div>
+    </div>
+  </div>
+
+  <!-- BANNER -->
+  <div style="background-color: #ffd25f; color: black; text-align: center; padding: 30px; font-weight: bold;">
+    BANNER
+  </div>
+
+</body>
+</html>
+
