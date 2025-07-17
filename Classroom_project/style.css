@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  padding: 20px;
+  gap: 10px;
+  background-color:aliceblue;
+  height: 5vh;
+}
+.op {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.option {
+  width: 17px;
+  height: 2px;
+  background-color: rgb(95, 88, 88);
+  margin: 1px 0;
+}
+
+.classroom {
+  text-decoration: none;
+  color: rgb(51, 47, 47);
+  font-size: 24px;
+  font-weight: 400;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+.classroom:hover {
+  color: blue;
+  text-decoration: underline;
+}
+.nav2{
+  margin-left: 70%;
+  margin-bottom: 20;
+}
+  .side {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  height: 92vh;
+  background-color: rgb(248, 248, 248);
+}
+
+.main {
+  width: 80vw;
+  height: 92vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.front {
+  display: flex;
+}
+
+.items {
+  font-size: 17px;
+  font-weight: 400;
+  font-family: sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.items:hover {
+  background-color: rgb(222, 222, 222);
+  border-radius: 20px;
+}
+.svg {
+  margin-left: 20px;
+}
+
+.itemmain {
+  border: 1px solid rgb(216, 202, 202);
+  width:320px;
+  height: 300px;
+  margin: 20px;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.itemmain img {
+  position: absolute;
+  border-radius: 10px 10px 0 0;
+  filter: grayscale(15%) saturate(95%);
+  width: 320px;
+  height: 100px;
+}
+.itemmain:hover{
+      transform: translateY; 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+#mainlogo {
+  border-radius: 50%;
+  float: right;
+  height: 4.6875rem;
+  margin: 4rem 14.4rem;
+  position: absolute;
+  width: 4.6875rem;
+}
+.text-overlay {
+  position: relative;
+  font-size: 22px;
+  font-weight: 400;
+  font-family: sans-serif;
+  margin: 15px 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+.text-overlay:hover {
+  text-decoration: underline;
+}
+#lastsvg {
+  height: 25px;
+  width: 25px;
+}
+#lastsvg:hover {
+  background-color: rgb(209, 219, 228);
+}
+.king {
+  display: flex;
+  gap: 40px;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  width: 280px;
+}
+@media only screen and (max-width: 930px) {
+  .items {
+    font-size: 13px;
+  }
+  .svg {
+    margin-left: 10px;
+  }
+}
