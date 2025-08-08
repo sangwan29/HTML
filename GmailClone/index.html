@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+
+<body>
+    <div class="h-screen bg-slate-100">
+        <!--Div like navbar which conatin 10% height-->
+        <div class="h-[10%] flex justify-between">
+            <!--Gmail logo-->
+            <div class="flex items-center ml-4">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#000000">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                </svg>
+                <img src="https://static.vecteezy.com/system/resources/previews/013/948/544/non_2x/gmail-logo-on-transparent-white-background-free-vector.jpg"
+                    alt="" class="h-12 w-12 bg-slate-200 rounded-full ml-2" />
+                <p class="text-3xl text-slate-800 ml-2">Gmail</p>
+            </div>
+            <!--Search bar div-->
+            <div class="w-[50%] h-13 bg-slate-200 mt-4 rounded-full ml-10">
+                <input type="text" placeholder="Serach mail" class="w-full h-full rounded-2xl pl-4 text-xl" />
+            </div>
+            <!--Conating icons in navbar like div-->
+            <div class="flex w-[15%] justify-between items-center mr-6">
+                <a href="">
+                    <div class="hover:bg-slate-200 rounded-full h-10 w-10 flex justify-center items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#000000">
+                            <path
+                                d="M478-240q21 0 35.5-14.5T528-290q0-21-14.5-35.5T478-340q-21 0-35.5 14.5T428-290q0 21 14.5 35.5T478-240Zm-36-154h74q0-33 7.5-52t42.5-52q26-26 41-49.5t15-56.5q0-56-41-86t-97-30q-57 0-92.5 30T342-618l66 26q5-18 22.5-39t53.5-21q32 0 48 17.5t16 38.5q0 20-12 37.5T506-526q-44 39-54 59t-10 73Zm38 314q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+                        </svg>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="hover:bg-slate-200 rounded-full h-10 w-10 flex justify-center items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#000000">
+                            <path
+                                d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z" />
+                        </svg>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="hover:bg-slate-200 rounded-full h-10 w-10 flex justify-center items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#000000">
+                            <path
+                                d="M480-644v236l96 74-36-122 90-64H518l-38-124ZM233-120l93-304L80-600h304l96-320 96 320h304L634-424l93 304-247-188-247 188Z" />
+                        </svg>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="hover:bg-slate-200 rounded-full h-10 w-10 flex justify-center items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#000000">
+                            <path
+                                d="M240-160q-33 0-56.5-23.5T160-240q0-33 23.5-56.5T240-320q33 0 56.5 23.5T320-240q0 33-23.5 56.5T240-160Zm240 0q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm240 0q-33 0-56.5-23.5T640-240q0-33 23.5-56.5T720-320q33 0 56.5 23.5T800-240q0 33-23.5 56.5T720-160ZM240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400ZM240-640q-33 0-56.5-23.5T160-720q0-33 23.5-56.5T240-800q33 0 56.5 23.5T320-720q0 33-23.5 56.5T240-640Zm240 0q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Zm240 0q-33 0-56.5-23.5T640-720q0-33 23.5-56.5T720-800q33 0 56.5 23.5T800-720q0 33-23.5 56.5T720-640Z" />
+                        </svg>
+                    </div>
+                </a>
+                <div class="h-10 w-10 flex justify-center items-center">
+                    <img src="https://funylifee.in/wp-content/uploads/2022/12/27_Whatsapp-Dp-images-FunyLife.in_-1024x1024.jpg"
+                        alt="" class="h-10 w-10 rounded-full" />
+                </div>
+            </div>
+        </div>
+        <!--Main div which conatin 90% height-->
+        <div class="h-[90%] flex">
+            <!--Ist side div-->
+            <div class="h-full w-[20%] hidden md:hidden lg:block xl:block 2xl:block bg-slate-100 overflow-y-scroll">
+                <!--New div which conatin h-10 height-->
+                <div class="flex w-[70%] shadow-2xl h-16 ml-4 justify-center items-center rounded-2xl bg-blue-200 mt-4">
+                    <div class="pt-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#000000">
+                            <path
+                                d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z" />
+                        </svg>
+                    </div>
+                    <div class="pt-2 text-xl pl-2">Compose</div>
+                </div>
+                <!--Home div-->
+                <a href="" class="">
+                    <div class="flex mt-8 h-10 w-[100%] pl-8 pt-2 hover:bg-slate-200 hover:rounded-full">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#000000">
+                                <path
+                                    d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-120H640q-30 38-71.5 59T480-240q-47 0-88.5-21T320-320H200v120Zm280-120q38 0 69-22t43-58h168v-360H200v360h168q12 36 43 58t69 22ZM200-200h560-560Z" />
+                            </svg>
+                        </div>
+                        <p class="text-lg">Inbox</p>
+                    </div>
+                </a>
+                <!--Starred div-->
+                <a href="">
+                    <div class="flex mt-2 h-10 w-[100%] hover:bg-slate-200 hover:rounded-full pl-8 pt-2">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#000000">
+                                <path
+                                    d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z" />
+                            </svg>
+                        </div>
+                        <p class="text-lg">Starred</p>
+                    </div>
+                </a>
+                <!--Snoozed div-->
+                <a href="">
+                    <div class="flex mt-2 h-10 w-[100%] hover:bg-slate-200 hover:rounded-full pl-8 pt-2">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#000000">
+                                <path
+                                    d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 27-3 53t-10 51q-14-16-32.5-27T794-418q3-15 4.5-30.5T800-480q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93q51 0 97.5-15t85.5-42q12 17 29.5 30t37.5 20q-51 41-114.5 64T480-80Zm290-160q-21 0-35.5-14.5T720-290q0-21 14.5-35.5T770-340q21 0 35.5 14.5T820-290q0 21-14.5 35.5T770-240Zm-158-52L440-464v-216h80v184l148 148-56 56Z" />
+                            </svg>
+                        </div>
+                        <p class="text-lg">Snoozed</p>
+                    </div>
+                </a>
+
+                <!--Sent div-->
+                <a href="">
+                    <div class="flex mt-2 h-10 w-[100%] hover:bg-slate-200 hover:rounded-full pl-8 pt-2">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#000000">
+                                <path
+                                    d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z" />
+                            </svg>
+                        </div>
+                        <p class="text-lg">Sent</p>
+                    </div>
+                </a>
+                <!--Drafts div-->
+                <a href="">
+                    <div class="flex mt-2 h-10 w-[100%] hover:bg-slate-200 hover:rounded-full pl-8 pt-2">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#000000">
+                                <path
+                                    d="m480-920 362 216q18 11 28 30t10 40v434q0 33-23.5 56.5T800-120H160q-33 0-56.5-23.5T80-200v-434q0-21 10-40t28-30l362-216Zm0 466 312-186-312-186-312 186 312 186Zm0 94L160-552v352h640v-352L480-360Zm0 160h320-640 320Z" />
+                            </svg>
+                        </div>
+                        <p class="text-lg">Drafts</p>
+                    </div>
+                </a>
+                <!--Important div-->
+                <a href="">
+                    <div class="flex mt-2 h-10 w-[100%] hover:bg-slate-200 hover:rounded-full pl-8 pt-2">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#000000">
+                                <path
+                                    d="m80-160 240-320L80-800h520q19 0 36 8.5t28 23.5l216 288-216 288q-11 15-28 23.5t-36 8.5H80Zm160-80h360l180-240-180-240H240l180 240-180 240Zm270-240Z" />
+                            </svg>
+                        </div>
+                        <p class="text-lg">Important</p>
+                    </div>
+                </a>
+                <!--Chats div-->
+                <a href="">
+                    <div class="flex mt-2 h-10 w-[100%] hover:bg-slate-200 hover:rounded-full pl-8 pt-2">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#000000">
+                                <path
+                                    d="M240-400h320v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z" />
+                            </svg>
+                        </div>
+                        <p class="text-lg">Chats</p>
+                    </div>
+                </a>
+                <!--Scheduled div-->
+                <a href="">
+                    <div class="flex mt-2 h-10 w-[100%] hover:bg-slate-200 hover:rounded-full pl-8 pt-2">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#000000">
+                                <path
+                                    d="M120-160v-640l572 240h-12q-35 0-66 8t-60 22L200-680v140l240 60-240 60v140l216-92q-8 23-12 45.5t-4 46.5v2L120-160Zm560 80q-83 0-141.5-58.5T480-280q0-83 58.5-141.5T680-480q83 0 141.5 58.5T880-280q0 83-58.5 141.5T680-80Zm66-106 28-28-74-74v-112h-40v128l86 86ZM200-372v-308 400-92Z" />
+                            </svg>
+                        </div>
+                        <p class="text-lg">Scheduled</p>
+                    </div>
+                </a>
+                <!--All Mail-->
+                <a href="">
+                    <div class="flex mt-2 h-10 w-[100%] hover:bg-slate-200 hover:rounded-full pl-8 pt-2">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#000000">
+                                <path
+                                    d="M280-280q-33 0-56.5-23.5T200-360v-400q0-33 23.5-56.5T280-840h560q33 0 56.5 23.5T920-760v400q0 33-23.5 56.5T840-280H280Zm280-188L280-663v303h560v-303L560-468Zm0-98 280-194H280l280 194ZM120-120q-33 0-56.5-23.5T40-200v-500h80v500h660v80H120Zm720-546v-94H280v94-94h560v94Z" />
+                            </svg>
+                        </div>
+                        <p class="text-lg">All Mail</p>
+                    </div>
+                </a>
+                <!--Spam div-->
+                <a href="">
+                    <div class="flex mt-2 h-10 w-[100%] hover:bg-slate-200 hover:rounded-full pl-8 pt-2">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#000000">
+                                <path
+                                    d="M480-280q17 0 28.5-11.5T520-320q0-17-11.5-28.5T480-360q-17 0-28.5 11.5T440-320q0 17 11.5 28.5T480-280Zm-40-160h80v-240h-80v240ZM330-120 120-330v-300l210-210h300l210 210v300L630-120H330Zm34-80h232l164-164v-232L596-760H364L200-596v232l164 164Zm116-280Z" />
+                            </svg>
+                        </div>
+                        <p class="text-lg">Spam</p>
+                    </div>
+                </a>
+                <!--Bin div-->
+                <a href="">
+                    <div class="flex mt-2 h-10 w-[100%] hover:bg-slate-200 hover:rounded-full pl-8 pt-2">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#000000">
+                                <path
+                                    d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z" />
+                            </svg>
+                        </div>
+                        <p class="text-lg">Bin</p>
+                    </div>
+                </a>
+                <!--Categories div-->
+                <a href="">
+                    <div class="flex mt-2 h-10 w-[100%] hover:bg-slate-200 hover:rounded-full pl-8 pt-2">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#000000">
+                                <path
+                                    d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h440q19 0 36 8.5t28 23.5l216 288-216 288q-11 15-28 23.5t-36 8.5H160Zm0-80h440l180-240-180-240H160v480Zm220-240Z" />
+                            </svg>
+                        </div>
+                        <p class="text-lg">Categories</p>
+                    </div>
+                </a>
+                <!--Manage Subscriptions div-->
+                <a href="">
+                    <div class="flex mt-2 h-10 w-[100%] hover:bg-slate-200 hover:rounded-full pl-8 pt-2">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#000000">
+                                <path
+                                    d="M480-440 160-640v400h320q0 21 3 40.5t9 39.5H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v228q-18-9-38.5-15t-41.5-9v-124L480-440Zm0-80 320-200H160l320 200ZM760-40q-83 0-141.5-58.5T560-240q0-83 58.5-141.5T760-440q83 0 141.5 58.5T960-240q0 83-58.5 141.5T760-40ZM640-220h240v-40H640v40Zm-480-20v-480 480Z" />
+                            </svg>
+                        </div>
+                        <p class="text-lg">Manage Subscriptions</p>
+                    </div>
+                </a>
+                <!--Manage Labels div-->
+                <a href="">
+                    <div class="flex mt-2 h-10 w-[100%] hover:bg-slate-200 hover:rounded-full pl-8 pt-2">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#000000">
+                                <path
+                                    d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z" />
+                            </svg>
+                        </div>
+                        <p class="text-lg">Manage labels</p>
+                    </div>
+                </a>
+                <!--Create new label div-->
+                <a href="">
+                    <div class="flex mt-2 h-10 w-[100%] hover:bg-slate-200 hover:rounded-full pl-8 pt-2">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#000000">
+                                <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+                            </svg>
+                        </div>
+                        <p class="text-lg">Create new label</p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="flex justify-between text-2xl m-8">
+                        <div>Labels</div>
+                        <div class="mt-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#000000">
+                                <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="h-full w-[80%] rounded-2xl bg-white p-8 overflow-y-scroll sm:w-[100%]">
+                <!-- Inbox Container -->
+                <div class="mx-auto bg-white shadow rounded-lg overflow-hidden">
+                    <!-- Header Tabs -->
+                    <div class="flex border-b text-lg font-medium justify-between">
+                        <button class="flex-1 px-4 py-2 text-blue-600 border-b-2 border-blue-600">
+                            Primary
+                        </button>
+                        <button class="flex-1 px-4 py-2 text-gray-600 hover:bg-gray-100">
+                            Promotions
+                            <span class="ml-1 bg-green-500 text-white text-xs px-2 py-0.5 rounded-full">1 new</span>
+                        </button>
+                        <button class="flex-1 px-4 py-2 text-gray-600 hover:bg-gray-100">
+                            Social
+                        </button>
+                        <button class="flex-1 px-4 py-2 text-gray-600 hover:bg-gray-100">
+                            Updates
+                            <span class="ml-1 bg-orange-500 text-white text-xs px-2 py-0.5 rounded-full">5 new</span>
+                        </button>
+                    </div>
+                    <!-- Inbox List -->
+                    <div class="divide-y text-base divide-gray-200 ">
+                        <!-- Email Row -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4" />
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2">
+                                    <span class="font-semibold">Naukri Alerts</span>
+                                    <span class="text-gray-500">naukri campus : Last few days to enroll for Quiz</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">14:30</span>
+                            </div>
+                        </div>
+                        <!-- Email Row -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4" />
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2">
+                                    <span class="font-semibold">Prajjal Dhar</span>
+                                    <span class="text-gray-500">Wishing You a Joyful Rakhi</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">8 Aug</span>
+                            </div>
+                        </div>
+                        <!-- Email Row -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4" />
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2">
+                                    <span class="font-semibold">Prajjal Dhar</span>
+                                    <span class="text-gray-500">Interview Questions of Web Dev</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">8 Aug</span>
+                            </div>
+                        </div>
+                        <!-- Row 4 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4" />
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">McAfee</span>
+                                    <span class="text-gray-500 truncate">Your free trial has just 3 days left!</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">8 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 5 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4" />
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">REGex Software</span>
+                                    <span class="text-gray-500 truncate">New material: "5/8/25" - Notification
+                                        settings</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">6 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 6 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4" />
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">Resume Now</span>
+                                    <span class="text-gray-500 truncate">View your resume - Your document has been
+                                        saved</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">5 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 7 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4" />
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">REGex Software</span>
+                                    <span class="text-gray-500 truncate">New material: "grid" - Notification
+                                        settings</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">5 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 8 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4" />
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">REGex Software</span>
+                                    <span class="text-gray-500 truncate">New material: "Core Java Collection Framework
+                                        Lecture"</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">5 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 9 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4" />
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">REGex Software</span>
+                                    <span class="text-gray-500 truncate">New material: "4/8/25" - Notification
+                                        settings</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">5 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 10 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4" />
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">REGex Software</span>
+                                    <span class="text-gray-500 truncate">New material: "29/7/25" - Notification
+                                        settings</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">31 Jul</span>
+                            </div>
+                        </div>
+                        <!-- Row 4 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4">
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">McAfee</span>
+                                    <span class="text-gray-500 truncate">Your free trial has just 3 days left!</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">8 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 5 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4">
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">REGex Software</span>
+                                    <span class="text-gray-500 truncate">New material: "5/8/25" - Notification
+                                        settings</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">6 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 6 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4">
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">Resume Now</span>
+                                    <span class="text-gray-500 truncate">View your resume - Your document has been
+                                        saved</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">5 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 7 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4">
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">REGex Software</span>
+                                    <span class="text-gray-500 truncate">New material: "grid" - Notification
+                                        settings</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">5 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 8 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4">
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">REGex Software</span>
+                                    <span class="text-gray-500 truncate">New material: "Core Java Collection Framework
+                                        Lecture"</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">5 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 9 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4">
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">REGex Software</span>
+                                    <span class="text-gray-500 truncate">New material: "4/8/25" - Notification
+                                        settings</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">5 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 10 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4">
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">REGex Software</span>
+                                    <span class="text-gray-500 truncate">New material: "29/7/25" - Notification
+                                        settings</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">31 Jul</span>
+                            </div>
+                        </div>
+                        <!-- Row 4 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4">
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">McAfee</span>
+                                    <span class="text-gray-500 truncate">Your free trial has just 3 days left!</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">8 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 5 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4">
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">REGex Software</span>
+                                    <span class="text-gray-500 truncate">New material: "5/8/25" - Notification
+                                        settings</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">6 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 6 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4">
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">Resume Now</span>
+                                    <span class="text-gray-500 truncate">View your resume - Your document has been
+                                        saved</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">5 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 7 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4">
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">REGex Software</span>
+                                    <span class="text-gray-500 truncate">New material: "grid" - Notification
+                                        settings</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">5 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 8 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4">
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">REGex Software</span>
+                                    <span class="text-gray-500 truncate">New material: "Core Java Collection Framework
+                                        Lecture"</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">5 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 9 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4">
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">REGex Software</span>
+                                    <span class="text-gray-500 truncate">New material: "4/8/25" - Notification
+                                        settings</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">5 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 10 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4">
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">REGex Software</span>
+                                    <span class="text-gray-500 truncate">New material: "29/7/25" - Notification
+                                        settings</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">31 Jul</span>
+                            </div>
+                        </div>
+                        <!-- Row 4 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4">
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">McAfee</span>
+                                    <span class="text-gray-500 truncate">Your free trial has just 3 days left!</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">8 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 5 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4">
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">REGex Software</span>
+                                    <span class="text-gray-500 truncate">New material: "5/8/25" - Notification
+                                        settings</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">6 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 6 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4">
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">Resume Now</span>
+                                    <span class="text-gray-500 truncate">View your resume - Your document has been
+                                        saved</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">5 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 7 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4">
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">REGex Software</span>
+                                    <span class="text-gray-500 truncate">New material: "grid" - Notification
+                                        settings</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">5 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 8 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4">
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">REGex Software</span>
+                                    <span class="text-gray-500 truncate">New material: "Core Java Collection Framework
+                                        Lecture"</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">5 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 9 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4">
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">REGex Software</span>
+                                    <span class="text-gray-500 truncate">New material: "4/8/25" - Notification
+                                        settings</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">5 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 10 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4">
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">REGex Software</span>
+                                    <span class="text-gray-500 truncate">New material: "29/7/25" - Notification
+                                        settings</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">31 Jul</span>
+                            </div>
+                        </div>
+                        <!-- Row 4 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4">
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">McAfee</span>
+                                    <span class="text-gray-500 truncate">Your free trial has just 3 days left!</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">8 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 5 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4">
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">REGex Software</span>
+                                    <span class="text-gray-500 truncate">New material: "5/8/25" - Notification
+                                        settings</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">6 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 6 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4">
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">Resume Now</span>
+                                    <span class="text-gray-500 truncate">View your resume - Your document has been
+                                        saved</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">5 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 7 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4">
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">REGex Software</span>
+                                    <span class="text-gray-500 truncate">New material: "grid" - Notification
+                                        settings</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">5 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 8 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4">
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">REGex Software</span>
+                                    <span class="text-gray-500 truncate">New material: "Core Java Collection Framework
+                                        Lecture"</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">5 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 9 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4">
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">REGex Software</span>
+                                    <span class="text-gray-500 truncate">New material: "4/8/25" - Notification
+                                        settings</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">5 Aug</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 10 -->
+                        <div class="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                            <input type="checkbox" class="mr-3 w-4 h-4">
+                            <span class="mr-3">⭐</span>
+                            <div class="flex-1 flex justify-between">
+                                <div class="flex space-x-2 overflow-hidden">
+                                    <span class="font-semibold">REGex Software</span>
+                                    <span class="text-gray-500 truncate">New material: "29/7/25" - Notification
+                                        settings</span>
+                                </div>
+                                <span class="text-gray-500 whitespace-nowrap">31 Jul</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
