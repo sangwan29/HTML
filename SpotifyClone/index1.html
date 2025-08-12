@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-white font-sans h-screen">
+    <!-- Spotify Header -->
+    <!-- यह हेडर पेज के ऊपर रहता है और इसमें logo, नेविगेशन, सर्च और यूज़र बटन होते हैं -->
+    <header class="bg-black px-4 py-3 flex items-center justify-between w-full sticky top-0 z-50 h-[10%]">
+        <!-- Left Section: Logo + Navigation -->
+        <!-- बाएं साइड में लोगो और नेविगेशन लिंक हैं -->
+        <div class="flex items-center space-x-6">
+            <!-- Logo -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg" alt="Spotify"
+                class="h-8 w-auto" />
+
+            <!-- Navigation Links -->
+            <!-- पहले से छुपे हुए नेव लिंक (mobile में hidden, md से दिखेंगे) -->
+            <nav class="hidden md:flex space-x-4 text-base font-medium">
+                <a href="#" class="hover:text-green-500">Home</a>
+                <a href="#" class="hover:text-green-500">Your Library</a>
+            </nav>
+        </div>
+
+        <!-- Middle Section: Search Bar -->
+        <!-- मिडल में सर्च बार है, जो md और ऊपर स्क्रीन साइज पर दिखता है -->
+        <div class="flex-1 max-w-lg mx-4 hidden md:block">
+            <div class="flex items-center bg-neutral-800 rounded-full px-3 py-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-5 h-5 text-gray-400">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-4.35-4.35m0 0a7.5 7.5 0 1110.607-10.607 7.5 7.5 0 01-10.607 10.607z" />
+                </svg>
+                <!-- सर्च इनपुट (सिर्फ UI के लिए) -->
+                <input type="text" placeholder="What do you want to listen to?"
+                    class="bg-transparent outline-none text-lg px-2 w-full h-12 " />
+            </div>
+        </div>
+
+        <!-- Right Section: Buttons -->
+        <!-- दाहिने साइड में एक्सप्लोर, इंस्टॉल, नोटिफिकेशन और यूज़र अवतार हैं -->
+        <div class="flex items-center space-x-3">
+            <button class="bg-white text-black px-4 py-1 rounded-full text-base font-bold hover:scale-105 transition">
+                Explore Premium
+            </button>
+            <button
+                class="hidden sm:block bg-neutral-800 px-4 py-1 rounded-full text-base font-medium hover:bg-neutral-700">
+                Install App
+            </button>
+            <!-- Notification Icon -->
+            <button class="p-2 rounded-full hover:bg-gray-800">
+                🔔
+            </button>
+            <!-- User avatar initial -->
+            <div
+                class="bg-orange-800 p-2 rounded-full cursor-pointer hover:bg-orange-700 h-10 w-10 flex items-center justify-center">
+                D
+            </div>
+        </div>
+    </header>
+
+    <!-- Main layout wrapper: left sidebar, center main content, right now-playing -->
+    <div class="h-[80%] flex gap-3">
+        <!-- LEFT ASIDE: Library / Playlists -->
+        <!-- यह साइडबार यूज़र की लाइब्रेरी और प्लेलिस्ट दिखाता है, स्क्रॉल करने योग्य लिस्ट के साथ -->
+        <aside class=" bg-[#121212] text-white w-[25%] min-w-[200px] max-w-sm flex flex-col rounded-2xl">
+            <!-- Fixed Top Section -->
+            <!-- टॉप में टाइटल, create बटन और फिल्टर होते हैं (sticky ताकि ऊपर चिपके रहें) -->
+            <div class="sticky top-0 bg-[#121212] z-10 p-4 pb-2">
+                <!-- Title & Create -->
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-lg font-bold">Your Library</h2>
+                    <div class="flex items-center space-x-2">
+                        <button class="text-white hover:text-gray-300 text-lg font-medium">+ Create</button>
+                        <button class="hover:text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Filter Buttons -->
+                <!-- playlist / artists जैसी quick filter buttons -->
+                <div class="flex space-x-2 mb-4">
+                    <button class="px-3 py-1 bg-gray-800 rounded-full text-lg hover:bg-gray-700">Playlists</button>
+                    <button class="px-3 py-1 bg-gray-800 rounded-full text-lg hover:bg-gray-700">Artists</button>
+                </div>
+
+                <!-- Search + Sort -->
+                <!-- साइडबार का छोटा सर्च फील्ड और मेनू आइकन -->
+                <div class="flex items-center justify-between">
+                    <input type="text" placeholder="Search"
+                        class="bg-transparent border-b border-gray-600 outline-none text-sm w-[60%]">
+                    <button class="hover:text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 6h18M3 12h18M3 18h18" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Scrollable Playlist List -->
+            <!-- यह हिस्सा स्क्रॉल होने वाला है और प्लेलिस्ट आइटम्स को सूचीबद्ध करता है -->
+            <div class="flex-1 px-4 space-y-3 pb-4 overflow-y-scroll ">
+                <div class="flex items-center space-x-3 hover:bg-gray-800 p-2 rounded-md">
+                    <img src="https://www.livemint.com/lm-img/img/2023/08/22/600x338/raju_1692694756695_1692694767042.jpg" class="w-12 h-12 rounded" alt="">
+                    <div>
+                        <p class="font-medium">Liked Songs</p>
+                        <p class="text-gray-400 text-sm">Playlist · 24 songs</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-3 hover:bg-gray-800 p-2 rounded-md">
+                    <img src="https://media.istockphoto.com/id/154228410/photo/sad-singer-with-electric-bass.jpg?s=612x612&w=0&k=20&c=uPIIrI-ScvQIxU4qzfCxVZwcjALRoW54_1aDrkGpwFM=" class="w-12 h-12 rounded" alt="">
+                    <div>
+                        <p class="font-medium">Mood off 😔 sad 😭😭 song</p>
+                        <p class="text-gray-400 text-sm">Playlist · DJ ¥~ ANIKET</p>
+                    </div>
+                </div>
+
+                <!-- Repeat other playlist items -->
+                <!-- नीचे कई समान playlist items हैं — UI demo के लिए placeholder images और text -->
+                <div class="flex items-center space-x-3 hover:bg-gray-800 p-2 rounded-md">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeJaRdCgq3ce8FPrD_L-zIyCAVW0xrOxLxCw&s" class="w-12 h-12 rounded" alt="">
+                    <div>
+                        <p class="font-medium">Khasa Aala Chahar</p>
+                        <p class="text-gray-400 text-sm">Playlist · 24 songs</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-3 hover:bg-gray-800 p-2 rounded-md">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpU4Vussj933yMDIgq5dW_VFs_eA_CFnqtAA&s" class="w-12 h-12 rounded" alt="">
+                    <div>
+                        <p class="font-medium">Ajay Hooda</p>
+                        <p class="text-gray-400 text-sm">Playlist · 24 songs</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-3 hover:bg-gray-800 p-2 rounded-md">
+                    <img src="https://www.jhakaasmovies.com/images/story_images/thumb_38037.jpg" class="w-12 h-12 rounded" alt="">
+                    <div>
+                        <p class="font-medium">Renuka Panwar</p>
+                        <p class="text-gray-400 text-sm">Playlist · 24 songs</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-3 hover:bg-gray-800 p-2 rounded-md">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFXDwpScIOTBPoy_juP_OzRAblheHeA_JcKA&s" class="w-12 h-12 rounded" alt="">
+                    <div>
+                        <p class="font-medium">Sapna Choudhary</p>
+                        <p class="text-gray-400 text-sm">Playlist · 24 songs</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-3 hover:bg-gray-800 p-2 rounded-md">
+                    <img src="https://hindi.cdn.zeenews.com/hindi/sites/default/files/2022/07/08/1213387-anjali-raghav.jpg?im=FitAndFill=(1200,900)" class="w-12 h-12 rounded" alt="">
+                    <div>
+                        <p class="font-medium">Anjali Ragav</p>
+                        <p class="text-gray-400 text-sm">Playlist · 24 songs</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-3 hover:bg-gray-800 p-2 rounded-md">
+                    <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1Jy4Eu.img?w=768&h=432&m=6&x=337&y=138&s=152&d=152" class="w-12 h-12 rounded" alt="">
+                    <div>
+                        <p class="font-medium">Masoom Sharma</p>
+                        <p class="text-gray-400 text-sm">Playlist · 24 songs</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-3 hover:bg-gray-800 p-2 rounded-md">
+                    <img src="https://a10.gaanacdn.com/gn_img/artists/w4MKPDOKoj/4MKP4wogKo/size_m_1702277975.jpg" class="w-12 h-12 rounded" alt="">
+                    <div>
+                        <p class="font-medium">Vijay Verma</p>
+                        <p class="text-gray-400 text-sm">Playlist · 24 songs</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </aside>
+
+        <!-- MAIN: central content area -->
+        <!-- यह मुख्य कंटेंट है — बैकग्राउंड इमेज, फिल्टर बटन, ग्रिड कार्ड्स और "Made for" सेक्शन -->
+        <main class="relative w-full sm:w-[80%] md:w-[70%] lg:w-[60%] overflow-y-auto custom-scrollbar rounded-2xl">
+            <!-- Background image layer -->
+            <!-- पेपर-बैकग्राउंड इमेज जो कंटेंट के पीछे स्केल होती है -->
+            <div class="absolute inset-0 bg-cover bg-no-repeat opacity-40"
+                style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnPFc_bTiW_d3MERoJS51Kyz_eIEVyPNXwng&s');">
+
+            </div>
+            <!-- Gradient fade to black -->
+            <!-- इमेज के ऊपर एक ग्रेडिएंट ताकि foreground टेक्स्ट readable रहे -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black via-black/60 to-black"></div>
+
+            <!-- Foreground content -->
+            <div class="relative z-10 px-4">
+
+                <!-- Filter Buttons -->
+                <!-- sticky filter buttons जो scroll करते हुए भी दिखते रहते हैं -->
+                <div class="sticky top-0 bg-black/50 backdrop-blur-md z-20 py-4 flex flex-wrap gap-2">
+                    <button class="px-4 py-2 bg-gray-800 rounded-full">All</button>
+                    <button class="px-4 py-2 bg-gray-800 rounded-full">Music</button>
+                    <button class="px-4 py-2 bg-gray-800 rounded-full">Podcasts</button>
+                </div>
+
+                <!-- Playlist Grid -->
+                <!-- ग्रिड में कार्ड्स — responsive grid columns (2/3/4) -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-4">
+                    <div class="bg-gray-900 p-2 rounded-lg flex">
+                        <img src="https://i.ytimg.com/vi/IxfKweqXlbc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCftrcJsz1ADFbBjSoOZAKANR8tVA"
+                            alt="" class="h-14 w-14 ">
+                        <span class="pl-4">Mood off 😔<br>sad😭😭song</span>
+                    </div>
+                    <div class="bg-gray-900 p-2 rounded-lg flex">
+                        <img src="https://sm.mashable.com/t/mashable_in/photo/default/arijit-singh-copy_ddzh.1248.jpg"
+                            alt="" class="h-14 w-14 ">
+                        <span class="pl-4">Moody Mix</span>
+                    </div>
+                    <div class="bg-gray-900 p-2 rounded-lg flex">
+                        <img src="https://media.istockphoto.com/id/154228410/photo/sad-singer-with-electric-bass.jpg?s=612x612&w=0&k=20&c=uPIIrI-ScvQIxU4qzfCxVZwcjALRoW54_1aDrkGpwFM="
+                            alt="" class="h-14 w-14 ">
+                        <span class="pl-4">I-Pop Sad Feels</span>
+                    </div>
+                    <div class="bg-gray-900 p-2 rounded-lg flex">
+                        <img src="https://rollingstoneindia.com/wp-content/uploads/2025/03/Ayushmann-Khurrana-live.jpg"
+                            alt="" class="h-14 w-14 ">
+                        <span class="pl-4">Hot Hits Haryanvi</span>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-4">
+                    <div class="bg-gray-900 p-2 rounded-lg flex">
+                        <img src="https://a10.gaanacdn.com/gn_img/artists/w4MKPDOKoj/4MKP4wogKo/size_m_1702277975.jpg"
+                            alt="" class="h-14 w-14 ">
+                        <span class="pl-4">Yo hai haryanvi 😔</span>
+                    </div>
+                    <div class="bg-gray-900 p-2 rounded-lg flex">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Sidhu_Moose_Wala_during_the_shooting_of_his_film_Moosa_Jatt_%28cropped%29.jpg"
+                            alt="" class="h-14 w-14 ">
+                        <span class="pl-4">Siddu Moose<br>Wala Radio</span>
+                    </div>
+                    <div class="bg-gray-900 p-2 rounded-lg flex">
+                        <img src="https://m.media-amazon.com/images/I/81FRJzLYgpL.png"
+                            alt="" class="h-14 w-14 ">
+                        <span class="pl-4">Daily Mix 4</span>
+                    </div>
+                    <div class="bg-gray-900 p-2 rounded-lg flex">
+                        <img src="https://c.saavncdn.com/558/Mohabat-Punjabi-2021-20211026134618-500x500.jpg"
+                            alt="" class="h-14 w-14 ">
+                        <span class="pl-4">I-Pop Mohabbat</span>
+                    </div>
+                </div>
+
+                <!-- New Release / Made for sections -->
+                <!-- नीचे कई "Made for" कैरोट्स हैं — horizontally scrollable lists -->
+                <div class="mt-6">
+                    <span class="text-xs">Made for</span>
+                    <h2 class="text-xl font-bold"><span class="">Deepika Choudhary</span></h2>
+                    <div class="flex overflow-x-auto gap-4 mt-4 justify-between ">
+                        <div class="">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkDIX62H7HeJGTvAmOFTkP-fO_MVVZ9iy1Sw&s"
+                                class="rounded-xl h-40 w-40" alt="">
+                            <p class="text-lg text-gray-400">Jubin Nutiyal,<br>Vishal Shekhar.....</p>
+                        </div>
+                        <div class="">
+                            <img src="https://i.pinimg.com/736x/04/84/16/048416aa6c740e73756ebdc88d477ea3.jpg"
+                                class="rounded-xl h-40 w-40" alt="">
+                            <p class="text-lg text-gray-400">Diljit Dosanjh,<br> Kulwinder billa.....</p>
+                        </div>
+                        <div class="">
+                            <img src="https://i.scdn.co/image/ab6761610000e5eb5ba2d75eb08a2d672f9b69b7"
+                                class="rounded-xl h-40 w-40" alt="">
+                            <p class="text-lg text-gray-400">Arijit Singh,<br> Pritam.....</p>
+                        </div>
+                        <div class="">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnXJjBAyTpw78Vy1F8Ljf14qpEaAHjbU6f6Q&s"
+                                class="rounded-xl h-40 w-40" alt="">
+                            <p class="text-sm text-gray-400">Gulzar Channiwala, <br> Arjun Kanungo.....</p>
+                        </div>
+                        <div class="">
+                            <img src="https://i.scdn.co/image/ab6761610000e5eb2cf6d06726cbbf929c6d37d8"
+                                class="rounded-xl h-40 w-40" alt="">
+                            <p class="text-sm text-gray-400">Masoom Sharma, <br> Gippy Grewal.....</p>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- (ऊपर जैसा सेक्शन कई बार repeat हुआ है — UI demo के लिए) -->
+                <div class="mt-6">
+                    <span class="text-xs">Made for</span>
+                    <h2 class="text-xl font-bold"><span class="">Deepika Choudhary</span></h2>
+                    <div class="flex overflow-x-auto gap-4 mt-4 justify-between ">
+                        <div class="">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkDIX62H7HeJGTvAmOFTkP-fO_MVVZ9iy1Sw&s"
+                                class="rounded-xl h-40 w-40" alt="">
+                            <p class="text-lg text-gray-400">Jubin Nutiyal,<br>Vishal Shekhar.....</p>
+                        </div>
+                        <div class="">
+                            <img src="https://i.pinimg.com/736x/04/84/16/048416aa6c740e73756ebdc88d477ea3.jpg"
+                                class="rounded-xl h-40 w-40" alt="">
+                            <p class="text-lg text-gray-400">Diljit Dosanjh,<br> Kulwinder billa.....</p>
+                        </div>
+                        <div class="">
+                            <img src="https://i.scdn.co/image/ab6761610000e5eb5ba2d75eb08a2d672f9b69b7"
+                                class="rounded-xl h-40 w-40" alt="">
+                            <p class="text-lg text-gray-400">Arijit Singh,<br> Pritam.....</p>
+                        </div>
+                        <div class="">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnXJjBAyTpw78Vy1F8Ljf14qpEaAHjbU6f6Q&s"
+                                class="rounded-xl h-40 w-40" alt="">
+                            <p class="text-sm text-gray-400">Gulzar Channiwala, <br> Arjun Kanungo.....</p>
+                        </div>
+                        <div class="">
+                            <img src="https://i.scdn.co/image/ab6761610000e5eb2cf6d06726cbbf929c6d37d8"
+                                class="rounded-xl h-40 w-40" alt="">
+                            <p class="text-sm text-gray-400">Masoom Sharma, <br> Gippy Grewal.....</p>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- और भी repeat सेक्शन्स — वास्तविक ऐप में यह डेटा डायनेमिक होगा -->
+                <div class="mt-6">
+                    <span class="text-xs">Made for</span>
+                    <h2 class="text-xl font-bold"><span class="">Deepika Choudhary</span></h2>
+                    <div class="flex overflow-x-auto gap-4 mt-4 justify-between ">
+                        <div class="">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkDIX62H7HeJGTvAmOFTkP-fO_MVVZ9iy1Sw&s"
+                                class="rounded-xl h-40 w-40" alt="">
+                            <p class="text-lg text-gray-400">Jubin Nutiyal,<br>Vishal Shekhar.....</p>
+                        </div>
+                        <div class="">
+                            <img src="https://i.pinimg.com/736x/04/84/16/048416aa6c740e73756ebdc88d477ea3.jpg"
+                                class="rounded-xl h-40 w-40" alt="">
+                            <p class="text-lg text-gray-400">Diljit Dosanjh,<br> Kulwinder billa.....</p>
+                        </div>
+                        <div class="">
+                            <img src="https://i.scdn.co/image/ab6761610000e5eb5ba2d75eb08a2d672f9b69b7"
+                                class="rounded-xl h-40 w-40" alt="">
+                            <p class="text-lg text-gray-400">Arijit Singh,<br> Pritam.....</p>
+                        </div>
+                        <div class="">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnXJjBAyTpw78Vy1F8Ljf14qpEaAHjbU6f6Q&s"
+                                class="rounded-xl h-40 w-40" alt="">
+                            <p class="text-sm text-gray-400">Gulzar Channiwala, <br> Arjun Kanungo.....</p>
+                        </div>
+                        <div class="">
+                            <img src="https://i.scdn.co/image/ab6761610000e5eb2cf6d06726cbbf929c6d37d8"
+                                class="rounded-xl h-40 w-40" alt="">
+                            <p class="text-sm text-gray-400">Masoom Sharma, <br> Gippy Grewal.....</p>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- और भी सेक्शन्स हैं — ये सब UI placeholders हैं -->
+                <div class="mt-6">
+                    <span class="text-xs">Made for</span>
+                    <h2 class="text-xl font-bold"><span class="">Deepika Choudhary</span></h2>
+                    <div class="flex overflow-x-auto gap-4 mt-4 justify-between ">
+                        <div class="">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkDIX62H7HeJGTvAmOFTkP-fO_MVVZ9iy1Sw&s"
+                                class="rounded-xl h-40 w-40" alt="">
+                            <p class="text-lg text-gray-400">Jubin Nutiyal,<br>Vishal Shekhar.....</p>
+                        </div>
+                        <div class="">
+                            <img src="https://i.pinimg.com/736x/04/84/16/048416aa6c740e73756ebdc88d477ea3.jpg"
+                                class="rounded-xl h-40 w-40" alt="">
+                            <p class="text-lg text-gray-400">Diljit Dosanjh,<br> Kulwinder billa.....</p>
+                        </div>
+                        <div class="">
+                            <img src="https://i.scdn.co/image/ab6761610000e5eb5ba2d75eb08a2d672f9b69b7"
+                                class="rounded-xl h-40 w-40" alt="">
+                            <p class="text-lg text-gray-400">Arijit Singh,<br> Pritam.....</p>
+                        </div>
+                        <div class="">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnXJjBAyTpw78Vy1F8Ljf14qpEaAHjbU6f6Q&s"
+                                class="rounded-xl h-40 w-40" alt="">
+                            <p class="text-sm text-gray-400">Gulzar Channiwala, <br> Arjun Kanungo.....</p>
+                        </div>
+                        <div class="">
+                            <img src="https://i.scdn.co/image/ab6761610000e5eb2cf6d06726cbbf929c6d37d8"
+                                class="rounded-xl h-40 w-40" alt="">
+                            <p class="text-sm text-gray-400">Masoom Sharma, <br> Gippy Grewal.....</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- RIGHT ASIDE: Now Playing list / embeds -->
+        <!-- राइट साइड में "Now Playing" सेक्शन और Spotify embed iframe सैम्पल्स हैं -->
+        <aside class="w-full md:w-[25%] p-4 bg-black overflow-y-auto custom-scrollbar">
+
+            <h2 class="text-lg font-bold mb-4">Now Playing</h2>
+            <!-- Spotify embed iframe (demo) -->
+            <iframe data-testid="embed-iframe" style="border-radius:12px"
+                src="https://open.spotify.com/embed/track/2L4f6JHzjqooWLpSFnbrCZ?utm_source=generator" width="100%"
+                height="352" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+            <!-- Track title and artist -->
+            <div class="mt-4">
+                <span class="text-2xl font-bold pl-4">Ji Laage Babya mai</span><br>
+                <span class="pl-6">Raj Mawar</span>
+            </div>
+            <!-- और कई iframe embeds दिए गए हैं — सिर्फ डेमो के लिए -->
+            <div class="mt-4">
+                <iframe data-testid="embed-iframe" style="border-radius:12px"
+                    src="https://open.spotify.com/embed/track/0dbn3EWykMhe3S7oNl0qG0?utm_source=generator" width="100%"
+                    height="352" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+            </div>
+            <div class="mt-4">
+                <span class="text-2xl font-bold pl-4">Ji Laage Babya mai</span><br>
+                <span class="pl-6">Raj Mawar</span>
+            </div>
+            <div class="mt-4">
+                <iframe data-testid="embed-iframe" style="border-radius:12px"
+                    src="https://open.spotify.com/embed/track/20baVBERL9C0LWLZtTZojc?utm_source=generator" width="100%"
+                    height="352" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+            </div>
+            <div class="mt-4">
+                <span class="text-2xl font-bold pl-4">Ji Laage Babya mai</span><br>
+                <span class="pl-6">Raj Mawar</span>
+            </div>
+            <div class="mt-4">
+                <iframe data-testid="embed-iframe" style="border-radius:12px"
+                    src="https://open.spotify.com/embed/track/2pZ3hVcPT3GpS7Y1zYPUc1?utm_source=generator" width="100%"
+                    height="352" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+            </div>
+            <div class="mt-4">
+                <span class="text-2xl font-bold pl-4">Ji Laage Babya mai</span><br>
+                <span class="pl-6">Raj Mawar</span>
+            </div>
+            <div class="mt-4">
+                <iframe data-testid="embed-iframe" style="border-radius:12px"
+                    src="https://open.spotify.com/embed/track/6oX4EQn1YQEvDUX27QnzSa?utm_source=generator" width="100%"
+                    height="352" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+            </div>
+            <div class="mt-4">
+                <span class="text-2xl font-bold pl-4">Ji Laage Babya mai</span><br>
+                <span class="pl-6">Raj Mawar</span>
+            </div>
+        </aside>
+
+        <!-- FOOTER: player controls -->
+        <!-- फूटर fixed है और इसमें प्ले/नेविगेशन कंट्रोल्स, प्रोग्रेस बार और वॉल्यूम कंट्रोल हैं -->
+        <footer
+            class="fixed bottom-0 w-full bg-[#181818] text-white px-4 py-2 flex flex-col md:flex-row md:items-center md:justify-between border-t border-gray-700 gap-2 md:gap-0">
+
+            <!-- Left section -->
+            <!-- बाएँ साइड में वर्तमान ट्रैक की थंबनेल और नाम -->
+            <div class="flex items-center space-x-4 md:w-1/4">
+                <img src="https://i.scdn.co/image/ab6761610000e5ebe20f10465254c74979a5bccd" alt="Song"
+                    class="w-12 h-12 rounded">
+                <div class="truncate">
+                    <p class="text-sm font-semibold truncate">Song Title</p>
+                    <p class="text-xs text-gray-400 truncate">Artist Name</p>
+                </div>
+                <button class="text-gray-400 hover:text-white hidden sm:block">
+                    ❤️
+                </button>
+            </div>
+
+            <!-- Center section -->
+            <!-- बीच में प्ले, नेक्स्ट/प्रिवियस और प्रोग्रेस बार -->
+            <div class="flex flex-col items-center md:w-2/4 w-full">
+                <!-- Controls -->
+                <div class="flex items-center space-x-3 sm:space-x-5 text-gray-400">
+                    <button class="hover:text-white text-sm sm:text-base">🔀</button>
+                    <button class="hover:text-white text-lg sm:text-xl">⏮</button>
+                    <button class="bg-white text-black rounded-full p-2 hover:scale-110 transition">
+                        ▶
+                    </button>
+                    <button class="hover:text-white text-lg sm:text-xl">⏭</button>
+                    <button class="hover:text-white text-sm sm:text-base">🔁</button>
+                </div>
+
+                <!-- Progress bar -->
+                <!-- यह प्रोग्रेस UI बस एक स्टेटिक बार है (width style inline) -->
+                <div class="hidden sm:flex items-center space-x-2 w-full px-4">
+                    <span class="text-xs text-gray-400">0:00</span>
+                    <div class="w-full bg-gray-600 h-1 rounded-full">
+                        <div class="bg-green-500 h-1 rounded-full" style="width: 40%"></div>
+                    </div>
+                    <span class="text-xs text-gray-400">3:45</span>
+                </div>
+            </div>
+
+            <!-- Right section -->
+            <!-- दाहिने साइड में कुछ अतिरिक्त कंट्रोल्स जैसे रेडियो, वॉल्यूम और बार -->
+            <div class="flex items-center justify-end space-x-4 md:w-1/4 text-gray-400">
+                <button class="hover:text-white hidden sm:block">📻</button>
+                <div class="flex items-center space-x-2">
+                    <button class="hover:text-white">🔊</button>
+                    <div class="w-16 sm:w-20 bg-gray-600 h-1 rounded-full hidden sm:block">
+                        <div class="bg-green-500 h-1 rounded-full" style="width: 60%"></div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+    </div>
+</body>
+
+</html>
